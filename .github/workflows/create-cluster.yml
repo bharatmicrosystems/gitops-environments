@@ -5,8 +5,11 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  deploy:
+  deploy-terraform:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./terraform
     steps:
     - uses: actions/checkout@v2
     - name: Install Terraform
