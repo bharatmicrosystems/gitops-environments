@@ -1,6 +1,6 @@
 resource "google_service_account" "main" {
-  account_id   = "gke-${var.cluster_name}-sa"
-  display_name = "GKE Cluster ${var.cluster_name} Service Account"
+  account_id   = "gke-${var.cluster_name}-${var.branch}-sa"
+  display_name = "GKE Cluster ${var.cluster_name}-${var.branch} Service Account"
 }
 
 resource "google_container_cluster" "main" {
