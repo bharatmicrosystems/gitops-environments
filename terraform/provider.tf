@@ -31,7 +31,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "tf-state-gitops-terraform-a"
+    bucket = "tf-state-gitops-terraform-b"
     prefix = "gitops-terraform"
   }
 }
