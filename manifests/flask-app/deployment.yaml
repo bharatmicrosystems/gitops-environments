@@ -15,5 +15,11 @@ spec:
       containers:
       - name: flask-app
         image: bharamicrosystems/flask-app-gitops:e6ec3ed
+        env:
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              name: flask-app-secret
+              key: SECRET
         ports:
         - containerPort: 5000
